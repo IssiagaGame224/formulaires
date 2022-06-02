@@ -1,0 +1,91 @@
+.text_entêt{
+    position: absolute;
+
+}
+
+/*Le tableau ne doit pas avoir des espace entres les cellules encadres*/
+table{
+    border-spacing: 0;
+    width: 500px;
+    position: absolute;
+    left: 50px;
+    top: 100px;
+    
+}
+/*La class .bordared permet d'appliquer les coins arrondis et une legere ombre*/
+.bordared{
+    border: solid #ccc 4px;
+    border-radius: 20px;
+    box-shadow: -8px 8px 3px rgb(32, 27, 27);
+
+}
+/*Les cellules du tableau: th et td : sont encadrers en haut à gauche*/
+.bordared td, .bordared th{
+    border-left: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+}
+/*Les cellules d'entêtes: th de la 1ere ligne ont un dégradé en arrière plan et une ombre*/
+.bordared th{
+    background-color: #a8bff1;
+    background-image: linear-gradient(top, #6a7d92,#a85e22);
+    box-shadow: 0 9px 0 rgba(red, green, blue, .8) inset;
+    border-top: none;
+    text-shadow: 3px 3px 3px rgba(red, green, blue, .5);
+
+}
+/*L'arrondis des cellules:pour la 1ere ligne il ne faut pas qu'il y ait de bordure en td 1ere cellule et th derniere cellule */
+.bordared td:first-child, .bordared th:first-child{
+    border-left: none;
+}
+
+/*Il faut avoir un arrondis pour les 1ere et derniere cellules
+de la 1ere et derniere ligne
+
+    nous utilisons les pseudo-classe :first-child et :last-child
+    sur la cellule d'en-tête <th> et les cellules <td> */
+
+.bordared th:first-child{
+    border-radius: 15px 0 0 0;
+    color: red;
+    background-color: salmon;
+    font-size: 20px;
+
+}
+.bordared th:last-child{
+    border-radius: 0  15px 0 0;
+    background-color: salmon;
+    color: green;
+    font-size: 20px;
+}
+.bordared tr:last-child td:first-child{
+    border-radius: 0 0 0 15px;
+}
+
+.bordared tr:last-child td:last-child{
+    border-radius: 0 0 15px 0;
+    
+}
+
+/*Le survol des lignes: ces derniers changes de couleur d'arriere plan detecter avec :hover */
+.bordared tr:hover{
+    background: #6a7d92;
+}
+
+/*Exemple d'ombre sur la page: pour donner la profondeur à vos page web avec le pseudo-classe :before sur le body*/
+
+body:before{
+    /*contenu vide*/
+    content: "";
+    /*Positionnement*/
+    position: fixed;
+    z-index: 100;
+    top: -10px;
+    left: -10px;
+    /*largeur et hauteur*/
+    width: 110%;
+    height: 10px;
+    /*Ombre*/
+    box-shadow: -10px 10px 20px 10px  rgba(54, 49, 49, 0.8);
+}
