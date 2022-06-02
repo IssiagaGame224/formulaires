@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <title>Un premier exemple de formulaire</title>
+        <meta charset="utf-8">
+        <link href="Style.css" rel="stylesheet" media="screen" >
+    </head>
+
+    <body>
+        <h1> 3) Interatif de formuleure:</h1>
+        
+        <div>
+            <form id="start" action="#" method="post" autocomplete="off">
+                <h1 id="titre">Inscription à la formation Web:</h1>
+
+                <!--Structure initial du formulaire-->
+                <p>
+                    <label for="name" >nom:</label>
+                    <input id="name" type="text" required placeholder="Nom">
+                </p>
+                <p>
+                    <label for="password">Mot de pass:</label>
+                    <input id="password" type="password" required placeholder="Mot de pass">
+                </p>
+                <!--Les obtions suplementaires-->
+                <div id="options">
+
+                    <p class="show">
+                        <a href="#options">Afficher + d'options:</a>
+                    </p>
+
+                    <p class="hide">
+                        <a href="#start">Masquer les options:</a>
+                    </p>
+
+                    <p>
+                        <label for="zipcode">Code postal:</label>
+                        <input id="zipcode" type="text" required placeholder="Code postal">
+                    </p>
+
+                    <p>
+                        <label for="town">Ville:</label>
+                        <input id="town" type="text" required placeholder="Ville">
+                    </p>
+
+                    <p>
+                        <label for="country">Pays:</label>
+                        <select id="country">
+                            <option>Guinée</option>
+                            <option>Guinée bissau</option>
+                            <option>Sénégal</option>
+                            <option>Mali</option>
+                            <option>Côte d'ivoire</option>
+                            <option>Liberia</option>
+                            <option>Siera léonne</option>
+                        </select>
+                    </p>
+                </div>
+
+                <!--Le Bouton d'envoi submit : est en commentaire pour afficher le message d'erreur avec le css-->
+                <!--p>
+                    <input type="submit" value="ENVOYER"> ou <a href="#form">Annuler</a>
+                </p-->
+
+                <p>
+                    <a class="submit" href="#finish">ENVOYER</a> ou <a href="#start">ANNULER</a>
+                </p>
+                
+                <!--Le message de confirmation-->
+                <div id="finish">
+                    <p>Inscription terminée!</p>
+                </div>
+
+                   
+                
+            </form>
+        </div>
+
+    </body>
+</html>

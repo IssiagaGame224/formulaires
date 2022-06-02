@@ -1,0 +1,174 @@
+/*La mise en forme du formulaire*/
+form{
+	position: absolute;
+	background: #f7f7f7;
+	background: -moz-linear-gradient(90deg, #ccc, #fff);
+	background: -webkit-gradient(linear,left top, left bottom ,from(#fff),to(#ccc) );
+	border: 1px solid #aaa;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+	-moz-box-shadow: 0 0 10px 4px #aaa;
+	-webkit-box-shadow: 0 0 10px 4px #aaa;
+	box-shadow: 0 0 10px 4px #aaa;
+	margin: 60px auto 0;
+	padding: 20px;
+	width: 440px;
+}
+/*Le titre dans le formulaire*/
+h1{
+	border-bottom: 1px solid #ccc;
+	font-size: 11px;
+	font-weight: bold;
+	letter-spacing: 2px;
+	margin-bottom: 20px;
+	text-transform: uppercase;
+}
+/*Les paragraphes ont des marge 0 et :last-child() pour cibler le dernier paragraphe du formulaire*/
+form p{
+	margin-bottom: 20px;
+}
+form p:last-child{
+	margin-bottom: 0px;
+}
+/*Les étiquettes: label*/
+label{
+	cursor: pointer;
+	display: block;
+	float: left;
+	font-size: 13px;
+	font-weight: bold;
+	line-height: 28px;
+	margin-bottom: 5px;
+	width: 120px;
+}
+/*Les étiquettes change d'apparence au survol :hover de la souris
+le caractere >> apparait et le texte change de couleur*/
+form p:hover label{	
+	color:#0459b7;
+}
+form p:hover label:after{
+	content: " >>";
+}
+/*Les champs de saisis*/
+input[type=text], input[type=password]{
+	background: rgba(255, 255, 255, .9);
+	background: -moz-linear-gradient(90deg, #fff, #eee);
+	background: -webkit-gradient(linear,left top, left bottom ,from(#eee),to(#fff) ,color-stop(.2,#fff));
+	border: 2px solid #aaa;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	-moz-box-shadow: 0 0 3px #aaa;
+	-webkit-box-shadow: 0 0 3px #aaa;
+	box-shadow: 0 0 3px #aaa;
+	padding: 5px;
+}
+/*quand un de ces champs est actif , quand il a le focus 
+la mise en forme change : bordure bleu et ombre portée*/
+input[type=text]:focus, input[type=password]:focus{
+	border-color: #093c75;
+	-moz-box-shadow: 0 0 3px #0459b7;
+	-webkit-box-shadow: 0 0 3px #0459b7;
+	box-shadow: 0 0 3px #0459b7;
+}
+/*La liste deroulante affiche une ombre portée et une bordure au survole*/
+select{
+	cursor: pointer;
+	padding: 3px;
+	-moz-box-shadow: 0 0 3px #aaa;
+	-webkit-box-shadow: 0 0 3px #aaa;
+	box-shadow: 0 0 3px #aaa;
+}
+select:active, select:focus{
+	border: 1px solid #093c75;
+	-moz-box-shadow: 0 0 3px #0459b7;
+	-webkit-box-shadow: 0 0 3px #0459b7;
+	box-shadow: 0 0 3px #0459b7;
+	outline: none;
+}
+/*le bouton d'envoi et le lien: possèdes entre autre un dégradé 
+de fond , des coins arrondis , une ombre portée sur la boite et sur le texte*/
+input[type=submit], a.submit{
+	background: #ddd;
+	background: -moz-linear-gradient(90deg, #0459b7, #08adff);
+	background: -webkit-gradient(linear,left top, left bottom ,from(#08adff),to(#0459b7) );
+	border: 1px solid #093c75;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	-moz-box-shadow: 0 0 1px #fff;
+	-webkit-box-shadow: 0 0 1px #fff;
+	box-shadow: 0 0 1px #fff;
+	color: #fff;
+	cursor: pointer;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	margin-left: 120px;
+	padding: 5px 10px;
+	text-decoration: none;
+	text-shadow: 0 1px 1px #333;
+	text-transform: uppercase;
+}
+/*Au survole ces élements interactifs ont leur propre mise en forme*/
+input[type=submit]:hover, a.submit:hover{
+	background: #eee;
+	background: -moz-linear-gradient(90deg, #067cd3, #0bcdff);
+	background: -webkit-gradient(linear,left top, left bottom ,from(#0bcdff),to(#067cd3) );
+	border-color: #093c75;
+	text-decoration: none;
+}
+/*Enfin , qunand ils sont cliqués : active et quand ils sont actifs: focus*/
+input[type=submit]:active,
+input[type=submit]:focus,
+a.submit:active,
+a.submit:focus{
+	background: #ccc;
+	background: -moz-linear-gradient(90deg, #0bcdff,#067cd3 );
+	background: -webkit-gradient(linear,left top, left bottom ,from(#067cd3),to(#0bcdff) );
+	border-color: #093c75;
+	outline: none;
+}
+/*La gestion des options*/
+#options{
+	margin-bottom: 20px;
+}
+/*L'affichage initial du formulaire:
+le lien Afficher + d'option est affiché*/
+#options .show{
+	display: block;
+}
+/*A l'affichage du formulaire: les options qui sont placées 
+dans des paragraphes p sont masquées grâce à la display: none*/
+#options p{
+	display: none;
+}
+/*De même que les éléments utilisant la classe .hide*/
+#options .hide{
+	display: none;
+}
+/*Afficher les options ayant la classe .show : avec target p*/
+#options:target p{
+	display: block;
+}
+/*masquer les options: ayant la classe .show */
+#options:target .show{
+	display: none;
+}
+/*Message de confirmation*/
+#finish{
+	display: none;
+	background: rgba(65, 166,42 , .2);
+	border: 2px solid #41a62a;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	padding: 5px;
+	text-align: center;
+	text-transform: uppercase;
+}
+/*quant l'utilisateur clique suerle bouton d'envoi*/
+#finish:target{
+	display: block;
+}
