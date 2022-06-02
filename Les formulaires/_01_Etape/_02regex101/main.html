@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <title>Les cles public avec l'element keygen</title>
+        <meta charset="utf-8">
+        <link href="Style.css" rel="stylesheet">
+    </head>
+
+    <body>
+
+        <h1> Validation des formulaires: avec (keygen)</h1>
+        <h2> rendre un champ obligatoire: avec l'attribut booléan (required)</h2>
+        <form id="inscription" method="#" action="#">
+            <p><label for="nom">Votre nom : </label></p>
+            <input type="text" id="nom" required>
+            <p><input type="submit"></p>
+        </form>
+
+        <h2>Les saisie autorisées: avec l'attribut (pattern)</h2>
+
+        <form id="securite" method="#" action="#">
+            <p><label for="pw">Votre mot de pass: 000-AAA</label></p>
+            <input type="text>" pattern="[0-9]{3}-[A-Z]{3}" id="pw">
+            <p><input type="submit"></p>
+        </form>
+       
+        <h2>Des l'ettres autorisées exemple: a ou g ou r</h2>
+
+        <form id="lettreAutoriser" action="#" method="#">
+            <p><label for="lettre">Les lettres agr qui sont uniquements autorisées:</label></p>
+            <input type="text>" pattern="[agr]" id="lettre">
+            <p><input type="submit"></p>
+        </form>
+
+        <h2>Un interval de lettre autorisées entre :G et M</h2>
+
+        <form action="#" method="#" id="intervalLettre">
+            <p><label for="interval">De G à M sont autorisées:</label></p>
+            <input type="text" pattern="[G-M]" id="interval">
+            <p><input type="submit"></p>
+        </form>
+
+        <h2>Des lettres autres que: [^abc]  et [^k-s] </h2>
+
+        <form action="#" method="#" id="autreque">
+            <p><label for="autre"> Les lettres abc sont excluts:</label></p>
+            <input type="text" pattern="[^abc]" id="autre"><br><br>
+            <p><label for="autre"> Les lettres entre k à s sont excluts:</label></p>
+            <input type="text" pattern="[^k-s]" id="autre">
+            <p><input type="submit"></p>
+        </form>
+
+        <h2>La casse des lettres: [a-z] ou [A-z] ou [A-Z]</h2>
+
+        <form id="casseLettre" action="#" method="#">
+            <p><label for="casse"> Tous les lettre miniscules et majuscules:</label></p>
+            <input type="text" pattern="[A-z]" id="casse">
+            <p><input type="submit"></p>
+        </form>
+
+        <h2>La condition Ou ( | )  : a et e ou w et z donc :[a-e]|[w-z]</h2>
+
+        <form id="logiqueOu" method="#" action="#">
+            <p><label for="ou">Entre a et e ou w et z :</label></p>
+            <input type="text" pattern="[a-e]|[w-z]">
+            <p><input type="submit"></p>
+        </form>
+
+        <h2>Autoriser des chiffres: entre 0 et 9: [0-9]</h2>
+
+        <form id="chiffresAutoriser" method="#" action="#">
+            <p><label id="chiffres">De 0 à 9 qui sont autorisées:</label></p>
+            <input type="text" pattern="[0-9]" id="chiffres">
+            <p><input type="submit"></p>
+        </form>
+
+        <h2>Un nombre limité de caractére: [A-z]{3} ou [A-z]{1,3}</h2>
+
+        <form id="limitCar" method="#" action="#">
+            <p><label for="limit">Le nombre de caractere est limiter: de 3</label></p>
+            <input type="text" pattern="[A-z]{3}" id="limit">
+            <p><input type="submit"></p>
+        </form>
+
+        <h2>Les saisie multiples: [A-Z]{2}[0-9]{3}</h2>
+
+        <form id="multiple" action="#" method="#">
+            <p><label id="mt">Format Autoriser: AA000</label></p>
+            <input type="text" pattern="[A-Z]{2}[0-9]{3}" id="mt">
+            <p><input type="submit"></p>
+        </form>
+
+        <h2>Pour autoriser une saisie entre 20 à 29: ^(2[0-9])$</h2>
+
+        <form id="multiple" action="#" method="#">
+            <p><label id="mt">Format Autoriser: [20-29]</label></p>
+            <input type="text" pattern="^(2[0-9])$}" id="mt">
+            <p><input type="submit"></p>
+        </form>
+    </body>
+
+</html>

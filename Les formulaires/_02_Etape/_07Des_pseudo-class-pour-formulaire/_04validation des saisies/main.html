@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <title>Des pseudo-classes pour les formulaires:</title>
+        <meta charset="utf-8">
+        <link href="Style.css" rel="stylesheet">
+    </head>
+
+    <body>
+
+        <h1> 3) La validation des saisies</h1>
+        <p>
+            Vous pouvez maintenant mettre en évidence 
+            les objets d'un formulaire qui sont <strong> actif, désactivés et cochés.</strong>:
+            <br>
+            <ol>
+                <li>:enabled</li>
+                <li>:disabled</li>
+                <li>:checked</li>
+                <li>:indeterminate</li>
+            </ol>
+        </p>
+        
+        <form id="inscription" method="#" action="#" autocomplete="on">
+            <h2>Les champs :required et :optional:</h2>
+            <h3>La mise en forme du (:focus) avec un contour suplementaire (outline)et propriété css3 :outline-offset </h3>
+
+            <p>
+                <label for="nom">Votre nom :</label>
+                <input id="nom" type="text" enabled required pattern="[a-zA-Z]{4,}" placeholder="Nom" autofocus>
+            </p>
+            <p>
+                <label for="age">Votre âge :</label>
+                <input id="age" type="number"  pattern="\d{2}" placeholder="âge" autocomplete="off">
+            </p>
+            <p>
+                <label for="email">Email :</label>
+                <input id="email" type="email"  required placeholder="Email">
+            </p>
+            <p>
+                <input id="homme" value="homme" name="sexe" type="radio" required autocomplete="off">
+                <label for="homme">Homme</label>
+
+                <input id="femme" value="femme" name="sexe" type="radio" required autocomplete="off">
+                <label for="femme">Femme</label>
+            </p>
+
+            <p>
+                <input id="accord" type="checkbox" required autocomplete="off">
+                <label for="accord">Je suis d'accord avec le réglement</label>
+            </p>
+
+            <p><input type="submit" value="Envoyer" id="envoi"></p>
+       
+
+            
+
+        </form>
+        
+    </body>
+
+</html>

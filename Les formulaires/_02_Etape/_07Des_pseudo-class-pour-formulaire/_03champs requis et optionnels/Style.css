@@ -1,0 +1,36 @@
+#accord:checked+label{
+    background-color: gold;
+    font-weight: bold;
+}
+
+#homme:checked+label, #femme:checked+label{
+    background-color:lemonchiffon;
+    font-style: italic;
+}
+
+:enabled{
+    background-color: lightgreen;
+}
+
+:disabled{
+    background-color: lightcoral;
+}
+
+input:required{
+    background-color:mediumaquamarine ;
+}
+
+input:optional{
+    background-color: lightgoldenrodyellow;
+}
+input#envoi{
+    background: none;
+}
+
+/*mise en forme de focus*/
+input:focus{
+    outline: solid 3px green;
+    outline-offset: 2px;
+    outline-style:ridge;
+    outline-color: midnightblue;
+}

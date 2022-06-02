@@ -1,0 +1,179 @@
+body{
+	background: lightpink;
+}
+
+/*L'ombre portee sur le formulaire*/
+#login {
+	background: rgb(114, 126, 129);
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.2),  
+                0 1px 1px rgba(0, 0, 0, .2),
+                0 3px 0 #fff,
+                0 4px 0 rgba(0, 0, 0, .2),
+                0 6px 0 #fff,  
+                0 7px 0 rgba(0, 0, 0, .2);
+
+}
+
+/* L'effet de pointillé*/
+#login{
+	position: absolute;
+	z-index: 0;
+}
+
+#login:before{
+	content: "";
+	position: absolute;
+	z-index: -1;
+	border: 1px dashed #ccc;
+	top: 5px;
+	bottom: 5px;
+	left: 5px;
+	right: 5px;
+	box-shadow: 0 0 0 1px #fff;
+}
+
+/* Ligne de dégradé subtiles:*/
+h1[id=titre]{
+	text-shadow: 0 1px 0 rgba(255,255,255,.7), 0px 2px 0 rgba(0,0,0,.5);
+	text-transform: uppercase;
+	text-align: center;
+	color: #666;
+	margin: 10px 0 30px 0;
+	letter-spacing: 4px;
+	font: normal 26px/1 Verdana, Helvetica;
+	position: relative;
+}
+
+h1[id=titre]:after,
+h1[id=titre]:before{
+	background-color: rgb(192, 185, 185);
+	content: "";
+	height: 4px;
+	position: absolute;
+	top: 15px;
+	width: 100px;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+h1[id=titre]:after{
+	background-image: linear-gradient(left, rgb(139, 115, 115), rgb(231, 224, 224) );
+	right: 0;
+}
+
+h1[id=titre]:before{
+	
+	background-image: linear-gradient(right, rgb(146, 131, 131), rgb(223, 205, 205));	
+	left: 0;
+}
+
+/*Les champs de saisie:*/
+fieldset{
+	border: 0;
+	padding: 0;
+	margin: 0;
+}
+
+#inputs input{
+	display: block;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+/*Les champs de saisie input*/
+input[id=username]{
+	background: #f1f1f1 url(pictogram1.png) no-repeat ;
+	padding: 15px 15px 15px 30px;
+	margin: 0 0 10px 0px;
+	width: 300px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	box-shadow: 0 1px 1px #ccc inset, 0 1px 0 #fff  ;
+	/*Positionnement d'image d'arriere plan*/
+	background-position: 5px 17px !important;
+}
+
+input[id=password]{
+	background: #f1f1f1 url(cle.png) no-repeat ;
+	padding: 15px 15px 15px 30px;
+	margin: 0 0 10px 0px;
+	width: 300px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	box-shadow: 0 1px 1px #ccc inset, 0 1px 0 #fff  ;
+	/*Positionnement d'image d'arriere plan*/
+	background-position: 5px 17px !important;
+}
+
+/*si le champ est actif*/
+#inputs input:focus{
+	border-color: #e8c291;
+	outline: 2px solid rgb(127, 139, 127);
+	outline-offset: 1px;
+	box-shadow: 0 0 0 1px #e8c291 inset;
+
+}
+/*Si le champ est actif et valide*/
+#inputs input:focus:valid{
+	background-color: rgb(133, 172, 133);
+	background-image: url(vert4.png);
+	background-position: 330px 17px !important;
+
+}
+
+/*Si le champ est actif et n'est pas valide*/
+#inputs input:focus:invalid{
+	background-color: rgb(190, 168, 165);
+	background-image: url(rouge4.png);
+	background-position: 330px 17px !important;
+}
+
+/*Le bouton de connextion*/
+#action{
+	margin: 25px 0 0 0;
+}
+#submit{
+	/*Mise en forme de la boite*/
+	border-width: 1px;
+	border-style: solid;
+	border-color: #D69e31 #e3a037 #d5982d #e3a037;
+	float: left;
+	height: 30px;
+	width: 70px;
+	padding: 0px;
+	margin-left: 10px;
+	margin-bottom: 10px;
+	cursor: pointer;
+	font: bold 15px Arial, Helvetica;
+	color: #8f5a0a;
+	/*Dégradé*/
+	background-color: #ffb94b;
+	background-image: linear-gradient(top, #e9d288, #ffb94b);
+	/* Coin arrondi*/
+	border-radius: 3px;
+	/*Ombre porter du texte*/
+	text-shadow: -1px 1px rgba(255, 255,255, .5);
+	/*Ombre porter de la boite*/
+	box-shadow: 0 0 1px rgba(0,0,0,.3),
+				0 1px 0 rgba(255, 255, 255,.3) inset;
+}
+
+/*L'utilisation du bouton*/
+/*S'il ya un survole et que ya focus alors on modifie le degradé :*/
+#submit:hover, #submit:focus{
+	background-color: #fddb6f;
+	background-image: linear-gradient(top, #ffb94b, #fddb6f);
+}
+/*Si le clic est actif alors l'effet d'ombre est créer avec un contour supplementaire*/
+#submit:active{
+	outline: 1px solid;
+	box-shadow: 0px 1px 10px 1px rgba(0,0,0,.5) inset;
+}
+
+/*Les autres lies:*/
+#actions a{
+	color: #3151A2;
+	float: right;
+	line-height: 35px;
+	margin-right: 10px;
+	margin-bottom: 0px;
+}

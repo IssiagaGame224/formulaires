@@ -1,0 +1,120 @@
+/*Met les proprietés a zero dans un 1er temps*/
+
+/*Les styles genereaux*/
+body,div,h1,form,fieldset,input,textarea{
+    padding: 0;
+    margin: 0;
+    border: 0;
+    outline: none;
+}
+
+html{
+    height: 100%;
+}
+
+/*Le font de la page*/
+body{
+    background: #728eaa;
+    background: linear-gradient(top, #25303C 0%,  #728EAA 100%); /*firefox*/
+    font-family: sans-serif;
+}
+
+/*Le formulaire*/
+#contact{
+    width: 430px; 
+    margin: 60px auto; 
+    padding: 60px 30px;
+    background: #c9d0de; 
+    border: 1px solid #e1e1e1;
+    box-shadow: 0px 0px 8px #444 
+}
+
+/*Le titre est un simple h1 avec une ombre portée:*/
+h1{
+    font-size: 35px;
+    color: #445668;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 0 0 35px 0;
+    text-shadow: 0px 1px 0px #f2f2f2;
+}
+
+/*Les etiquettes:*/
+label{
+    float: left;
+    clear: left;
+    margin: 11px 20px 0 0;
+    width: 95px;
+    text-align: right;
+    font-size: 16px;
+    color: #445668;
+    text-transform: uppercase;
+    text-shadow: 0px 1px 0px #f2f2f2;
+}
+
+/*Les champs de saisis:*/
+input{
+    width: 200px;
+    height: 30px;
+    padding: 5px 20px 0px 20px;
+    margin: 0 0 20px 0;
+    background: #5E768D;
+    background: linear-gradient(top, #546A7F, #5E768D 20%);
+    border-radius: 5px;
+    font-family: sans-serif;
+    font-size: 16px;
+    color: #f2f2f2;
+    text-transform: uppercase;
+    text-shadow: 0px -1px 0px #334f71;
+    text-align: center;
+
+}
+
+/*Les (placeholder) sont aussi mise en forme avec les ombre*/
+input::placeholder{
+    color: #a1b2c3;
+    text-shadow: 0px -1px 0px #38506b;
+}
+
+/*Le champ multiligne*/
+textarea{
+    width: 200px;
+    height: 170px;
+    padding: 12px 20px 0px 20px;
+    margin: 0px 0px 20px 0px;
+    background: #5E768D;
+    background: linear-gradient(top, #546A7F 0%, #5E768D 20%);
+    border-radius: 5px;
+    box-shadow: 0px 1px 0px #f2f2f2;
+    font-family: sans-serif;
+    font-size: 16px;
+    color: #f2f2f2;
+    text-transform: uppercase;
+    text-shadow: 0px -1px 0px #334f71;
+    text-align: center;
+}
+/*Les (placeholder) sont aussi mise en forme avec les ombre*/
+textarea::placeholder{
+    color: #a1b2c3;
+    text-shadow: 0px -1px 0px #38506b;
+}
+
+/*Le focus sur les champs*/
+input:focus, textarea:focus{
+    background: #728eaa;
+    background: linear-gradient(top, #668099 0%, #728eaa 20%);
+}
+
+/*Le bouton d'envoi*/
+input[type=submit]{
+    width: 160px;
+    height: 30px;
+    float: right;
+    padding: 10px 15px ;
+    margin: 0 75px 0 0;
+    box-shadow: 0px 0px 5px #999;
+    border: 1px solid #556f8c;
+    background: linear-gradient(top, #718DA9 0%, #415D79 100%);
+    cursor: pointer;
+
+}

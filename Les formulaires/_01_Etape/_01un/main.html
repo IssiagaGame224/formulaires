@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <title>Le Html5 et les Css3 pour les formulaires</title>
+        <meta charset="utf-8">
+        <link href="Style.css" rel="stylesheet">
+    </head>
+
+    <body>
+        <form action="" id="inscription">
+
+            
+            <p>
+                <!--Le champ pour les Email:-->
+                <label>Votre Email :</label>
+                <input type="email"> 
+                <br>
+                <!--Le champ pour les numero de telephone:-->
+                <label>Votre numéro:</label>
+                <input type="tel">
+                <br>
+                <!--Le champ pour les URL:-->
+                <label>Votre site web:</label>
+                <input type="url">
+                <br>
+                <!--Le champ pour les Dates et les heures:-->
+                <label>Date: </label>
+                <input type="date">
+                <br>
+
+                <label>Jours et l'heures: </label>
+                <input type="datetime">
+                <br>
+
+                <label>Heures-local: </label>
+                <input type="datetime-local">
+                <br>
+
+                <label>heures: </label>
+                <input type="time">
+                <br>
+
+                <label>Semaine: </label>
+                <input type="week">
+                <br>
+
+                <label>Mois: </label>
+                <input type="month">
+                <br>
+                <!--Le champ pour les valeurs numeriques:-->
+                <label>Age:</label>
+                <input type="number" min="18" max="100" step="1" value="48" id="age">
+
+                <br>
+                <!--Les reglettes avec curseur:-->
+                <label for="age2">Indique votre Age2</label>
+                <input type="range" min="18" max="100" step="1" value="48" id="age2" oninput ="document.getElementById('sortie').textContent=value">
+                <output id="sortie">48</output>
+
+                <!--Les champs de recherche:-->
+                <br>
+                <label>recherche: </label>
+                <input type="search">
+
+                 <!--Le champ  de saisie suggéré :-->
+                 <br>
+                <label for="liste-fruit">Un fruit:</label>
+                <input type="text" id="fruits" list="liste-fruit">
+                <datalist id="liste-fruit">
+                    <option value="Pomme"></option>
+                    <option value="Fraise"></option>
+                    <option value="Poire"></option>
+                </datalist>
+
+                <!--Le choix d'une couleur :-->
+                <br>
+                <label>Une couleur</label>
+                <input type="color">
+
+
+            </p>
+    
+
+
+        </form>
+    </body>
+
+</html>

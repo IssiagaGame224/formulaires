@@ -1,0 +1,39 @@
+#contenaire{
+    background-color: grey;
+    border: solid 2px green;
+}
+
+input{
+    border: solid 1px gray;
+    width: 200px;
+}
+
+label, input{
+    display: inline-block;
+}
+
+label{
+    width: 100px;
+    text-align: right;
+    margin-right: 10px;
+}
+
+input[type=submit]{
+    width: 75px;
+    background:hotpink;
+    border: green solid 2px;
+}
+:focus{
+    outline: 2px solid green;
+    outline-offset: 2px;
+}
+/*lorsque le champ actif et non valid et (:not(#envoi) exclu le bouton d'envoi)*/
+input:focus:invalid:not(#envoi){
+    background: url(images/rouge4.png) no-repeat 98% center;
+}
+
+/*lorsque le champ actif et valid et (:not(#envoi) exclu le bouton d'envoi)*/
+input:focus:valid:not(#envoi){
+    background: url(images/vert4.png) no-repeat 98% center;
+}
+

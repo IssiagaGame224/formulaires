@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <title>Des pseudo-classes pour les formulaires:</title>
+        <meta charset="utf-8">
+        <link href="Style.css" rel="stylesheet">
+    </head>
+
+    <body>
+
+        <h1> 1) Les objectifs des pseudo-classes:</h1>
+        <p>
+            Vous pouvez maintenant mettre en évidence 
+            les objets d'un formulaire qui sont <strong> actif, désactivés et cochés.</strong>:
+            <br>
+            <ol>
+                <li>:enabled</li>
+                <li>:disabled</li>
+                <li>:checked</li>
+            </ol>
+        </p>
+        
+        <form id="inscription" method="#" action="#" autocomplete="on">
+            <h2>Le formulaire et les styles:</h2>
+
+            <p>
+                <label for="nom">Votre nom :</label>
+                <input id="nom" type="text" enabled required pattern="[a-zA-Z]{4,}" placeholder="Nom" autofocus>
+            </p>
+            <p>
+                <label for="age">Votre âge :</label>
+                <input id="age" type="number" disabled required pattern="[0-9]{1,100}" placeholder="âge" autocomplete="off">
+            </p>
+            <p>
+                <input id="homme" value="homme" name="sexe" type="radio" required autocomplete="off">
+                <label for="homme">Homme</label>
+
+                <input id="femme" value="femme" name="sexe" type="radio" required autocomplete="off">
+                <label for="femme">Femme</label>
+            </p>
+
+            <p>
+                <input id="accord" type="checkbox" required autocomplete="off">
+                <label for="accord">Je suis d'accord avec le réglement</label>
+            </p>
+
+            <p><input type="submit"></p>
+       
+
+            
+
+        </form>
+        
+    </body>
+
+</html>

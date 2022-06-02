@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <title>Aider l'utilisateur dans le formulaire:</title>
+        <meta charset="utf-8">
+        <link href="Style.css" rel="stylesheet">
+    </head>
+
+    <body>
+
+        <h1> Aide à la saisie avec l'attribut : (placeholder)</h1>
+        <h2> rendre un champ obligatoire: avec l'attribut booléan (required)</h2>
+        <h2> Activer un champ et le faire clignoter avec l'attribut: (autofocus)</h2>
+        <form id="inscription" method="#" action="#">
+            <p><label for="nom">Votre nom : </label></p>
+            <input type="text" id="nom" required placeholder="nom" autofocus>
+
+            <p><label for="pw">Votre mot de pass :</label></p>
+            <input type="text" id="pw"  pattern="^(2[0-9])$"  placeholder="20 à 29" required >
+            <p><input type="submit"></p>
+        </form>
+
+        
+    </body>
+
+</html>

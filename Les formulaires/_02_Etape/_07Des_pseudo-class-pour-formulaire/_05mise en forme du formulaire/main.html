@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <title>Des pseudo-classes pour les formulaires:</title>
+        <meta charset="utf-8">
+        <link href="Style.css" rel="stylesheet">
+    </head>
+
+    <body>
+
+        <h1> 4) La mise en forme du formulaire:</h1>
+        <p>
+            Vous pouvez maintenant mettre en évidence 
+            les objets d'un formulaire qui sont <strong> actif, désactivés et cochés.</strong>:
+            <br>
+            <ol>
+                <li>:enabled</li>
+                <li>:disabled</li>
+                <li>:checked</li>
+                <li>:indeterminate</li>
+            </ol>
+        </p>
+
+        <div id="contenaire">
+            
+            <form id="inscription" method="#" action="#" autocomplete="on">
+                <h2>Les champs :required et :optional:</h2>
+                <h3>La mise en forme du (:focus) avec un contour suplementaire (outline)et propriété css3 :outline-offset </h3>
+                <h4>Les champs :valid (poin vert) et :invalid (point rouge):</h4>
+
+                <p>
+                    <label for="nom">Votre nom :</label>
+                    <input id="nom" type="text" enabled required  placeholder="Nom" autofocus>
+                </p>
+                <p>
+                    <label for="age">Votre âge :</label>
+                    <input id="age" type="text"  pattern="\d{2}" placeholder="âge" autocomplete="off">
+                </p>
+                <p>
+                    <label for="email">Email :</label>
+                    <input id="email" type="email" pattern="^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$" required placeholder="Email">
+                </p>
+            
+                <p><input type="submit" value="Envoyer" id="envoi"></p>
+  
+
+            </form>
+        </div>
+        
+    </body>
+
+</html>

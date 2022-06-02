@@ -1,0 +1,84 @@
+#contenaire{
+    background-color: grey;
+    border: solid 2px green;
+}
+
+input{
+    border: solid 1px gray;
+    width: 200px;
+}
+
+label, input{
+    display: inline-block;
+}
+
+label{
+    width: 100px;
+    text-align: right;
+    margin-right: 10px;
+}
+
+input[type=submit]{
+    width: 75px;
+    background:hotpink;
+    border: green solid 2px;
+}
+:focus{
+    outline: 2px solid green;
+    outline-offset: 2px;
+}
+/*lorsque le champ actif et non valid*/
+input:focus:invalid:not(#envoi){
+    background: url(images/rouge4.png) no-repeat 98% center;
+}
+
+/*lorsque le champ actif et valid*/
+input:focus:valid:not(#envoi){
+    background: url(images/vert4.png) no-repeat 98% center;
+}
+
+/*Pour eviter que le bouton d'envoie affiche le point*/
+input:focus:valid:not(#envoi){
+    background: url(images/vert4.png) no-repeat 98% center;
+
+}
+
+/*Les messages d'erreurs personnaliser:
+    par defaut le (display = none) n'est pas afficher
+    sauf en cas d'erreur on change la valeur 
+    de (display = block)
+*/
+span.nonValide{
+    display: none;
+    position: relative;
+    left: 250px;
+    top: 5px;
+    width: 230px;
+    border: solid 1px red;
+    background-color: lightgoldenrodyellow;
+    padding: 0px;
+    text-align: center;
+}
+
+/*au cas où ya l'erreur*/
+input:focus:invalid + span.nonValide{
+    display:block;
+    
+}
+
+/*Si le champ est valide*/
+span.valide{
+    display: none;
+    position: relative;
+    left: 250px;
+    top: 5px;
+    width: 60px;
+    border: solid 1px green;
+    background-color: lightgreen;
+    padding: 0px;
+    text-align: center;
+}
+
+input:focus:valid ~ span.valide{
+    display: block;
+}

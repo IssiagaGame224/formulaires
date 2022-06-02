@@ -1,0 +1,7 @@
+#commentaire {
+    width: 200px;
+    height: 90;
+    border: 1px solid #333;
+    background-color: lightyellow;
+    resize: both;
+}

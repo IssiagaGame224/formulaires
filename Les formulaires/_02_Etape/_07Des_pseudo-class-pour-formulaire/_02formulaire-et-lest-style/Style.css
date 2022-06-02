@@ -1,0 +1,17 @@
+#accord:checked+label{
+    background-color: gold;
+    font-weight: bold;
+}
+
+#homme:checked+label, #femme:checked+label{
+    background-color:lemonchiffon;
+    font-style: italic;
+}
+
+:enabled{
+    background-color: lightgreen;
+}
+
+:disabled{
+    background-color: lightcoral;
+}

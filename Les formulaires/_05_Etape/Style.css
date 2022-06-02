@@ -1,0 +1,16 @@
+/*La mise en forme du formulaire*/
+form{
+	position: absolute;
+	background: #f7f7f7;
+	background: linear-gradient(360deg, rgb(124, 117, 117), rgb(228, 223, 223));
+	border: 1px solid #aaa;
+	border-radius: 10px;
+	box-shadow: 0 0 10px 4px #aaa;
+	margin: 60px auto 0;
+	padding: 20px;
+	width: 440px;
+}
+/*Le titre dans le formulaire*/
+h1{
+	border-bottom: 1px solid #ccc;
+}
